@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f7f9fd;
+}
+
+.wrapper {
+  width: 90%;
+  font-size: 16px;
+  max-width: 43.753m;
+  margin: 1em auto;
+}
+
+.container {
+  width: 100%;
+}
+
+.sub-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper h3 {
+  color: #363d55;
+  font-weight: 500;
+  margin-bottom: 0.6em;
+}
+
+.container input {
+  display: block;
+  width: 100%;
+  padding: 0.6em 0.3em;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.3em;
+  color: #414a67;
+  outline: none;
+  font-weight: 400;
+  margin-bottom: 0.6em;
+}
+
+.container input:focus {
+  border-color: #587ef4;
+}
+
+.total-amount-container,
+.user-amount-container {
+  background: #fff;
+  padding: 1.25em 0.9em;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+}
+
+.output-container {
+  background-color: #587ef4;
+  color: #fff;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  margin: 2em 0;
+  padding: 1.2em;
+}
+
+.output-container p {
+  font-weight: 500;
+  margin-bottom: 0.6em;
+}
+
+.output-container span {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  color: #e5e5e5;
+}
+
+.submit {
+  font-size: 1em;
+  margin-top: 0.8em;
+  background-color: #587ef4;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submit:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.list {
+  background-color: #fff;
+  padding: 1.8em 1.2em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  border-radius: 0.6em;
+}
+
+.sublist-content {
+  width: 100%;
+  border-left: 0.3em solid #587ef4;
+  margin-bottom: 0.6em;
+  padding: 0.5em 1em;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+}
+
+.product {
+  font-weight: 500;
+  color: #363d55;
+}
+
+.amount {
+  color: #414a67;
+  margin-left: 20%;
+}
+
+.icons-container {
+  width: 5em;
+  margin: 1.2em;
+  align-items: center;
+}
+
+.product-title {
+  margin-bottom: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+.error {
+  color: #ff465a;
+}
+
+.edit {
+  margin-left: auto;
+}
+
+.edit,
+.delete {
+  background: transparent;
+  cursor: pointer;
+  margin-right: 1.5em;
+  border: none;
+  color: #587ef4;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .sub-container {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+}
+
+/* Modal pop up css styling */
+/* 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal button {
+  margin-top: 10px;
+} */
+
+/* Modla pop us styling using AI help */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: white;
+  width: 400px; /* Increased width */
+  padding: 20px 30px; /* Added padding for better spacing */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px; /* Smooth corners */
+  border: 3px solid #587ef4; /* Sky blue border */
+  font-family: Arial, sans-serif; /* Clean font */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add spacing between items */
+}
+
+.modal h2 {
+  margin: 0 0 10px;
+  color: #333; /* Darker title color */
+  text-align: center;
+}
+
+.modal label {
+  font-weight: bold;
+  color: #555; /* Subtle text color */
+}
+
+.modal input {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modal input:focus {
+  border-color: #587ef4; /* Highlight input on focus */
+}
+
+.modal button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #587ef4;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal button:hover {
+  background-color: #587ef4; /* Slightly darker blue on hover */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #333; /* Darker close button on hover */
+}
